@@ -13,6 +13,6 @@ public class 2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+     public int v;   
     }
 }
