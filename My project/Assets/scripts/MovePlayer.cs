@@ -5,6 +5,7 @@ using UnityEngine;
 public class MovePlayer : MonoBehaviour
 {
 
+    public Animator anim;
     public float speed;
     private Vector2 derection;
     private Rigidbody2D rb;
@@ -22,6 +23,9 @@ public class MovePlayer : MonoBehaviour
     {
         derection.x = Input.GetAxisRaw("Horizontal");
         derection.y = Input.GetAxisRaw("Vertical");
+        anim.SetFloat("Horizontal",derection.x);
+        //anim.SetFloat("Vertical",derection.y);
+        anim.SetFloat("Speed",derection.sqrMagnitude);
     }
 
     void FixedUpdate() {
