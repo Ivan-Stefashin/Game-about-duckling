@@ -24,7 +24,7 @@ public class MovePlayer : MonoBehaviour
         derection.x = Input.GetAxisRaw("Horizontal");
         derection.y = Input.GetAxisRaw("Vertical");
         anim.SetFloat("Horizontal",derection.x);
-        //anim.SetFloat("Vertical",derection.y);
+        anim.SetFloat("Vertical",derection.y);
         anim.SetFloat("Speed",derection.sqrMagnitude);
     }
 
